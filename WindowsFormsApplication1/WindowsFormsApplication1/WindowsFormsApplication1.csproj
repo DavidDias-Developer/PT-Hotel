@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3078C519-2FCC-4E67-A2D8-B93B5FAC976E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base1.Designer.cs">
+      <DependentUpon>Base1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base2.Designer.cs">
+      <DependentUpon>Base2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BLL.cs" />
+    <Compile Include="Resources\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL.cs" />
+    <Compile Include="LoginNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginNovo.Designer.cs">
+      <DependentUpon>LoginNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservas.Designer.cs">
+      <DependentUpon>Reservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Funcionários.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionários.Designer.cs">
+      <DependentUpon>Funcionários.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quartos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quartos.Designer.cs">
+      <DependentUpon>Quartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Restaurante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Restaurante.Designer.cs">
+      <DependentUpon>Restaurante.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Base1.resx">
+      <DependentUpon>Base1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base2.resx">
+      <DependentUpon>Base2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginNovo.resx">
+      <DependentUpon>LoginNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservas.resx">
+      <DependentUpon>Reservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Funcionários.resx">
+      <DependentUpon>Funcionários.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Quartos.resx">
+      <DependentUpon>Quartos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Restaurante.resx">
+      <DependentUpon>Restaurante.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1424966626_Client_Male_Light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425307304_Manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADDclientre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sdfaoiu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\k15726465.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lixo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_98558.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_98558.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1428519163_food.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asdasdsa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pequeno almoçor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pequeno almoçln.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacalhau-amendoa-castanha-receita.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bitoque1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lk_c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1591vinhotintocarmenerereserva750ml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png_lagar_de_darei_branco_-_2006.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37903.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\executivo-de-picanh_jpg_465x600_upscale_q85.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saladadomar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bolo-de-chocolate-com-morango.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_2639_903.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Receita-de-Salada-de-frutas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoverQuarto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comida1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComidaHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Funcionario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FuncionarioHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClienteHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SairHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sair1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frango-molho-gorgonzola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jantar-das-amigas-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4DozeBistro_Jantar_PratoPrincipal_Camaroes-flambados-no-conhaque-molho-de-frutas-citricas-com-anis-estrelado-e-risoto-de-alho-poro_FotoDanielGomes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sreqwe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobremesa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asdada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizarlocked.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizarhover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClienteLocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FuncionarioLocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuartosLocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComidaLocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1424966626_Client_Male_Light1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1425051474_bed-1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservahover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservalocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ManualHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manual.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paov.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sopaa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marisco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\queijo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lancheclassico.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sandes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waffe.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteLocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\okhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quartoshover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarto2Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente2Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarto2Hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Funcionario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Funcionario2Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserva2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reserva2hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comida2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comida2Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atualizar2hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sair2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sair2hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservaadd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservaaddhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservafinhover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservafin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservafinlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarotsadd2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quarto2AddHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservaadd2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservaadd2hover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservafin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservafin2hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete2hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok2hover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reservaaddlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oklocked.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
